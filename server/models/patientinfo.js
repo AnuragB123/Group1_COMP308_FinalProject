@@ -8,6 +8,6 @@
 
 //A Patient has a reference to Emergency Alert Model, will be able to create a Emergency Alert item
 
-//Motivational Video.... attribute...
+//Motivational Video.... attribute... (Reference to Daily Motivation Tips Attribute of Nurse)
 
 //body temperature, heart rate, blood pressure, Input these
