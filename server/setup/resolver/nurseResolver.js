@@ -1,4 +1,4 @@
-import Nurse from '../../models/nurseinfo'
+import Nurse from '../../models/nurseinfo.js'
 
 export default {
     nurse: async (res,req, nurseId) => {

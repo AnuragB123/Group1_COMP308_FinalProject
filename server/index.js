@@ -7,7 +7,9 @@ import morgan from 'morgan';
 
 import './config/db.js';
 import Schema from './setup/schema/schema.js';
+//import Schema from './setup/schema/projectSchema.js';
 import Resolver from './setup/resolver/index.js';
+//import Resover from './setup/resolver/nurseResolver.js'
 import isAuth from './authentication/isAuthenticated.js';
 
 dotenv.config();
@@ -31,7 +33,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/student', graphqlHTTP({
+app.use('/nurse', graphqlHTTP({
     schema: Schema,
     rootValue: Resolver,
     graphiql: true
