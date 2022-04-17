@@ -9,7 +9,7 @@ import './config/db.js';
 import Schema from './setup/schema/schema.js';
 //import Schema from './setup/schema/projectSchema.js';
 import Resolver from './setup/resolver/index.js';
-//import Resover from './setup/resolver/nurseResolver.js'
+//import NurseResolver from './setup/resolver/nurseResolver.js'
 import isAuth from './authentication/isAuthenticated.js';
 
 dotenv.config();

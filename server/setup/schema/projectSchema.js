@@ -2,7 +2,7 @@ import { buildSchema } from "graphql";
 
 export default buildSchema(`
     type Nurse{
-        _id: String!
+        nurseId: String!
         bodyTemperature: Int!
         heartRate: Int!
         bloodPressure: Int!
@@ -10,7 +10,7 @@ export default buildSchema(`
         dailyMotivationTips: String!
     }
     input NurseInput{
-        _id: String!
+        nurseId: String!
         bodyTemperature: Int!
         heartRate: Int!
         bloodPressure: Int!
