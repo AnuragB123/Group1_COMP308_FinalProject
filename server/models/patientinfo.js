@@ -64,7 +64,7 @@ let patientSchema = new mongoose.Schema({
   },
   emergencyAlert:{
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'EmergencyAlert'
+      ref: 'Alert'
   }
 },
 {
