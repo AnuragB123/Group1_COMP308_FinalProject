@@ -8,7 +8,7 @@ export default {
         }
     return patientinfo;
   },
-  createpatient: async (args, res) => {
+  createpatient: async (args, req, res) => {
     try {
         const existingalert = await Alert.findOne({ patientId: args.userInput.patientId});
         if (existingpatient) {
@@ -22,8 +22,8 @@ export default {
             bloodPressure: args.userInput.bloodPressure,
             resporitoryRate: args.userInput.resporitoryRate,
             signsSymptoms: args.userInput.signsSymptoms,
-            nurse: args.userInput.nurse,
-            emergencyAlert: args.userInput.emergencyAlert,
+            nurse: req.nurse,
+            emergencyAlert: req.emergencyAlert,
         });
       patient.save().then(() => {
           return res.status(200).json({
@@ -35,7 +35,7 @@ export default {
          throw err;
      }
   },
-  updatepatient: async (args) => {
+  updatepatient: async (args, req, res) => {
     try {
         const existingalert = await Alert.findOne({ patientId: args.userInput.patientId});
         if (!existingpatient) {
@@ -49,8 +49,8 @@ export default {
             bloodPressure: args.userInput.bloodPressure,
             resporitoryRate: args.userInput.resporitoryRate,
             signsSymptoms: args.userInput.signsSymptoms,
-            nurse: args.userInput.nurse,
-            emergencyAlert: args.userInput.emergencyAlert,
+            nurse: req.nurse,
+            emergencyAlert: req.emergencyAlert,
         });
         patient.save().then(() => {
           return res.status(200).json({
