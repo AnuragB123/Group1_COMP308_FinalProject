@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 import './Pages.css';
 import AuthContext from '../context/Authentication-Context';
-
+//Sign Up Page to creare a New User
 class SignupPage extends Component {
     state = {
       isLogin: true

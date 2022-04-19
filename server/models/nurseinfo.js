@@ -41,6 +41,10 @@ let nurseSchema = new mongoose.Schema({
         default: '',
         trim: true,
         required: true
+    },
+    patient : {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Patient"
     }
 },
 {

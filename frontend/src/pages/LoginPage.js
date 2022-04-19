@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './Pages.css';
 import AuthContext from '../context/Authentication-Context';
-
+//Login Page to fit with User Model 
 class LoginPage extends Component {
   state = {
     isLogin: true
