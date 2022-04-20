@@ -6,10 +6,9 @@ import cors from 'cors';
 import morgan from 'morgan';
 
 import './config/db.js';
-import Schema from './setup/schema/schema.js';
-//import Schema from './setup/schema/projectSchema.js';
-import Resolver from './setup/resolver/index.js';
-//import NurseResolver from './setup/resolver/nurseResolver.js'
+//import Schema from './setup/schema/schema.js';
+import Schema from './setup/schema/nurseSchema.js';
+import Resolver from './setup/resolver/nurseResolver.js';
 import isAuth from './authentication/isAuthenticated.js';
 
 dotenv.config();
@@ -40,5 +39,5 @@ app.use('/nurse', graphqlHTTP({
 }));
 
 app.listen(process.env.PORT, () => {
-    console.log(`server is running on http://localhost:${process.env.PORT}/student`);
+    console.log(`server is running on http://localhost:${process.env.PORT}/nurse`);
 });
