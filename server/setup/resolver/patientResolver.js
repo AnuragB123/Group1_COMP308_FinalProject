@@ -15,7 +15,7 @@ export default {
             }
         return patientinfo;
     },
-    createpatient: async (args, req, res) => {
+    createPatient: async (args, req, res) => {
         try {
             const existingpatient = await Alert.findOne({ patientId: args.userInput.patientId});
             if (existingpatient) {
@@ -40,7 +40,7 @@ export default {
             throw err;
         }
     },
-    updatepatient: async (args, req, res) => {
+    updatePatient: async (args, req, res) => {
         try {
             const existingpatient = await Alert.findOne({ patientId: args.userInput.patientId});
             if (!existingpatient) {
