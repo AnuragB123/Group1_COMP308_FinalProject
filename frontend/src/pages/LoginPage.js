@@ -14,24 +14,24 @@ class LoginPage extends Component {
 
   constructor(props) {
     super(props);
-    this.studentnumberEl = React.createRef();
+    this.usernameEl = React.createRef();
     this.passwordEl = React.createRef();
   }
 
   submitHandler = course => {
     course.preventDefault();
-    const studentnumber = this.studentnumberEl.current.value;
+    const username = this.usernameEl.current.value;
     const password = this.passwordEl.current.value;
 
-    if (studentnumber.trim().length === 0 || password.trim().length === 0) {
+    if (username.trim().length === 0 || password.trim().length === 0) {
       return;
     }
 
     let requestBody = {
       query:`
         query Login {
-          login(studentnumber: ${studentnumber}, password: "${password}") {
-            studentId
+          login(username: ${username}, password: "${password}") {
+            userId
             token
             tokenExpiration
           }
@@ -39,7 +39,7 @@ class LoginPage extends Component {
       `
     };
     console.log(`${JSON.stringify(requestBody)}`);
-    fetch('http://localhost:4000/student', {
+    fetch('http://localhost:4000/user', {
       method: 'POST',
       body: JSON.stringify(requestBody),
       headers: {
@@ -56,10 +56,10 @@ class LoginPage extends Component {
         if (resData.data.login.token) {
           this.context.login(
             resData.data.login.token,
-            resData.data.login.studentId,
+            resData.data.login.userId,
             resData.data.login.tokenExpiration
           );
-          console.log(resData.data.login.studentId);
+          console.log(resData.data.login.userId);
         }
       })
       .catch(err => {
@@ -71,8 +71,8 @@ class LoginPage extends Component {
     return (
       <form className="auth-form" onSubmit={this.submitHandler}>
         <div className="form-control">
-          <label htmlFor="studentnumber">Student Number</label>
-          <input type="studentnumber" id="studentnumber" ref={this.studentnumberEl} />
+          <label htmlFor="username">User Name</label>
+          <input type="username" id="username" ref={this.usernameEl} />
         </div>
         <div className="form-control">
           <label htmlFor="password">Password</label>

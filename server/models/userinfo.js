@@ -23,10 +23,8 @@ let userSchema = new mongoose.Schema({
     required: true
 }, 
   userType: {
-      type: String,
-      default: '',
-      trim: true,
-      required: true
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }
 },
 {

@@ -13,50 +13,35 @@ class SignupPage extends Component {
 
     constructor(props) {
         super(props);
-        this.studentnumberEl = React.createRef();
+        this.usernameEl = React.createRef();
         this.passwordEl = React.createRef();
-        this.firstnameEl = React.createRef();
-        this.lastnameEl = React.createRef();
-        this.addressEl = React.createRef();
-        this.cityEl = React.createRef();
-        this.phonenumberEl = React.createRef();
-        this.emailEl = React.createRef();
-        this.programEl = React.createRef();
+        this.usertypeEl = React.createRef();
     }
 
     submitHandler = event => {
         event.preventDefault();
-        const studentnumber = this.studentnumberEl.current.value;
+        const username = this.usernameEl.current.value;
         const password = this.passwordEl.current.value;
-        const firstname = this.firstnameEl.current.value;
-        const lastname = this.lastnameEl.current.value;
-        const address = this.addressEl.current.value;
-        const city = this.cityEl.current.value;
-        const phonenumber = this.phonenumberEl.current.value;
-        const email = this.emailEl.current.value;
-        const program = this.programEl.current.value;
+        const usertype = this.usertypeEl.current.value;
     
-        if (studentnumber.trim().length === 0 || password.trim().length === 0) {
+        if (username.trim().length === 0 || password.trim().length === 0) {
           return;
         }
     
         let requestBody = {
             query: `
                 mutation {
-                createStudent(userInput: {
-                    studentnumber: ${studentnumber}, password: "${password}", firstname: "${firstname}",
-                    lastname: "${lastname}", address: "${address}", city: "${city}", phonenumber: ${phonenumber},
-                    email: "${email}", program: "${program}"
+                createUser(userInput: {
+                    username: ${username}, password: "${password}", usertype: "${usertype}"
                 }) {
                     _id
-                    studentnumber
-                    firstname
+                    username
                 }
                 }
             `
         };
             
-        fetch('http://localhost:4000/student', {
+        fetch('http://localhost:4000/user', {
           method: 'POST',
           body: JSON.stringify(requestBody),
           headers: {
@@ -70,7 +55,7 @@ class SignupPage extends Component {
             return res.json();
           })
           .then(resData => {
-            alert(`${resData.data.createStudent.studentnumber} added!`)
+            alert(`${resData.data.createUser.username} added!`)
           })
           .catch(err => {
             console.log(err);
@@ -81,40 +66,16 @@ class SignupPage extends Component {
         return (
           <form className="auth-form" onSubmit={this.submitHandler}>
             <div className="form-control">
-              <label htmlFor="studentnumber">Student Number</label>
-              <input type="text" id="studentnumber" ref={this.studentnumberEl} />
+              <label htmlFor="username">User Name</label>
+              <input type="text" id="username" ref={this.usernameEl} />
             </div>
             <div className="form-control">
               <label htmlFor="password">Password</label>
               <input type="password" id="password" ref={this.passwordEl} />
             </div>
             <div className="form-control">
-              <label htmlFor="firstname">First Name</label>
-              <input type="text" id="firstname" ref={this.firstnameEl} />
-            </div>
-            <div className="form-control">
-              <label htmlFor="lastname">Last Name</label>
-              <input type="text" id="lastname" ref={this.lastnameEl} />
-            </div>
-            <div className="form-control">
-              <label htmlFor="address">Address</label>
-              <input type="text" id="address" ref={this.addressEl} />
-            </div>
-            <div className="form-control">
-              <label htmlFor="city">City</label>
-              <input type="text" id="city" ref={this.cityEl} />
-            </div>
-            <div className="form-control">
-              <label htmlFor="phonenumber">Phone Number</label>
-              <input type="text" id="phonenumber" ref={this.phonenumberEl} />
-            </div>
-            <div className="form-control">
-              <label htmlFor="email">Email</label>
-              <input type="text" id="email" ref={this.emailEl} />
-            </div>
-            <div className="form-control">
-              <label htmlFor="program">Program</label>
-              <input type="text" id="program" ref={this.programEl} />
+              <label htmlFor="usertype">User Type</label>
+              <input type="text" id="usertype" ref={this.usertypeEl} />
             </div>
             <div className="form-actions">
               <button type="submit">Submit </button>              
