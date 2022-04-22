@@ -1,3 +1,10 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+/*
+In this page, A Nurse User would be able to view the inputted information for a Patient
+ */
 //Import libraries
 import React from 'react';
 import {gql, useQuery} from "@apollo/client";

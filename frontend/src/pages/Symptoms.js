@@ -1,3 +1,10 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+/*
+In this page, A Patient User would be able to enter a list of Common Symptoms and then they would be able to ask a question and get an answer on how to resolve the Common Symptoms
+ */
 import React, {useRef, useEffect, useState} from 'react';
 import * as tf from "@tensorflow/tfjs";
 import * as qna from "@tensorflow-models/qna";

@@ -1,3 +1,9 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+//We kept the Old Files of Lab 3
+
 import React, { Component } from 'react';
 
 import Setup from '../components/setup/Setup';

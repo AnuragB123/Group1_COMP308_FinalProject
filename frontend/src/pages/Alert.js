@@ -1,3 +1,10 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+/*
+In this Page, We allow the User... In this case, A Patient User to Add and Delete Emergency Alerts. They would also be able to view the Specific Alert
+ */
 import React, { Component } from 'react';
 
 import Setup from '../components/setup/Setup';
