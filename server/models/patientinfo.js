@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 
 let patientSchema = new mongoose.Schema({
   patientId: {
-        type: Number,
+        type: String,
         default: '',
         trim: true,
         required: true
