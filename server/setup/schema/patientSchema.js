@@ -8,16 +8,19 @@ import { buildSchema } from "graphql";
 export default buildSchema(`
     type Patient{
         _id: String!
-        patientName: Int!
+        patientId: String!
+        patientName: String!
         bodyTemperature: Int!
         heartRate: Int!
         bloodPressure: Int!
         resporitoryRate: Int!
         signsSymptoms: String!
+        nurse: Nurse!
+        emergencyAlert: Alert!
     }
     input PatientInput{
-        _id: String!
-        patientName: Int!
+        patientId: String!
+        patientName: String!
         bodyTemperature: Int!
         heartRate: Int!
         bloodPressure: Int!
@@ -29,6 +32,7 @@ export default buildSchema(`
     }
     type RootQuery{
         patient(patientId: String!):Patient
+        patients:[Patient]
     }
     schema{
         query:RootQuery
