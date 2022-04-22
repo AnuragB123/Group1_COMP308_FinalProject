@@ -3,7 +3,8 @@ Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Re
 */
 
 /*
-In this Page, We allow the User... In this case, A Patient User to Add and Delete Emergency Alerts. They would also be able to view the Specific Alert
+In this Page, We allow the User... In this case, A Patient User to Add and Delete Emergency Alerts. 
+They would also be able to view the Specific Alert
 Joseph Developed This 
 */
 import React, { Component } from 'react';
