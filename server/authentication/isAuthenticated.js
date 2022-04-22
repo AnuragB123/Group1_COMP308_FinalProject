@@ -23,6 +23,6 @@ export default (req, res, next) => {
     return next();
   }
   req.isAuth = true;
-  req.studentnumber = decodedToken.studentnumber;
+  req.username = decodedToken.username;
   next();
 };

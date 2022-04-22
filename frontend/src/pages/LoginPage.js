@@ -1,4 +1,8 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
 
+//This would allow the User to login
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 

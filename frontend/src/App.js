@@ -1,11 +1,14 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
 
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/Signup';
-import CoursePage from './pages/Course';
-import StudentPage from './pages/Student';
+import PatientPage from './pages/Patient';
+import NursePage from './pages/CreateNurse';
 import MainNavigation from './pages/Navigation';
 import AuthContext from './context/Authentication-Context';
 
@@ -14,15 +17,15 @@ import './App.css';
 class App extends Component {
   state = {
     token: null,
-    studentnumber: null
+    username: null,
   };
 
-  login = (token, studentnumber, tokenExpiration) => {
-    this.setState({ token: token, studentnumber: studentnumber });
+  login = (token, username, tokenExpiration) => {
+    this.setState({ token: token, username: username });
   };
 
   logout = () => {
-    this.setState({ token: null, studentnumber: null });
+    this.setState({ token: null, username: null });
   };
 
   render() {
@@ -32,7 +35,7 @@ class App extends Component {
           <AuthContext.Provider
             value={{
               token: this.state.token,
-              studentnumber: this.state.studentnumber,
+              username: this.state.username,
               login: this.login,
               logout: this.logout
             }}
@@ -40,9 +43,9 @@ class App extends Component {
             <MainNavigation />
             <main className="main-content">
               <Switch>
-                {this.state.token && <Redirect from="/" to="/course" exact />}
+                {this.state.token && <Redirect from="/" to="/patient" exact />}
                 {this.state.token && (
-                  <Redirect from="/login" to="/course" exact />
+                  <Redirect from="/login" to="/patient" exact />
                 )}
                 {!this.state.token && (
                   <Route path="/login" component={LoginPage} />
@@ -51,10 +54,10 @@ class App extends Component {
                   <Route path="/signup" component={SignupPage} />
                 )}
                 {this.state.token && (
-                  <Route path="/student" component={StudentPage} />
+                  <Route path="/patient" component={PatientPage} />
                 )}
                 {this.state.token && (
-                  <Route path="/course" component={CoursePage} />
+                  <Route path="/nurse" component={NursePage} />
                 )}
                 {!this.state.token && <Redirect to="/login" exact />}
               </Switch>

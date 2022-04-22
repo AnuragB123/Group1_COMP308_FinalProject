@@ -1,3 +1,8 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+//This is the Navigation for the different pages
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -22,10 +27,10 @@ const mainNavigation = props => (
               {context.token && (
                 <React.Fragment>
                   <li>
-                    <NavLink to="/student">Students</NavLink>
+                    <NavLink to="/patient">Patients</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/course">Courses</NavLink>
+                    <NavLink to="/nurse">Nurses</NavLink>
                   </li>
                   <li>
                     <button onClick={context.logout}>Logout</button>
