@@ -2,7 +2,7 @@
 Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
 */
 
-//Resolver for patient Model. Anurag Developed this
+//Resolver for patient Model. Prajwal and Illah Developed this
 
 //Import model
 import Patient from '../../models/patientinfo.js';

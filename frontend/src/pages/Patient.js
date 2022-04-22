@@ -1,7 +1,11 @@
-//Page to create and send emergency alert messages
-//Page to enter daily information
-//Page to view daily motivational tips
-//Page to enter checklist of common signs and symptoms and ask a question about and get answer (ML)
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+/*
+In this Page, a Patient User would be able to input their vital signs
+Prajwal and Illah developed this
+ */
 
 //Import libraries
 import React from 'react';
