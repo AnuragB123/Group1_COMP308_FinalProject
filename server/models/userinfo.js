@@ -1,6 +1,10 @@
-//User Model
-//Username, Password, UserType (Nurse Model or Patient Model) 
-//Aashi
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+/*
+The Model for User. Aaishi Developed this.
+ */
 
 import mongoose from 'mongoose';
 

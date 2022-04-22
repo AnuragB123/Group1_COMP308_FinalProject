@@ -1,7 +1,10 @@
-//Nurse Model
-//body temperature, heart rate, blood pressure (Create and Read), Daily Motivation Tips
-//Reference to Patient
-//Anurag
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+/*
+The Model for Nurse. Anurag Developed this 
+*/
 
 import mongoose from 'mongoose';
 

@@ -1,3 +1,8 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+//We left the Old Code for Lab 3
 import Course from '../../models/coursesinfo.js';
 import Students from '../../models/studentsinfo.js';
 

@@ -1,3 +1,9 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+//Resolver for Nurse Model. Anurag Developed this
+
 //Import model
 import Nurse from '../../models/nurseinfo.js'
 

@@ -1,6 +1,10 @@
-//Attributes to be discussed
-//Emergency ID, Emergency Name, Emergency Status (Minor, "Medium", Severe), Emergency Date
-//Joseph
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+/*
+This is the Model for Alert. Joseph Developed this.
+*/
 
 import mongoose from 'mongoose';
 
