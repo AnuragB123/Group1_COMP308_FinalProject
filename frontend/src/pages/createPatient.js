@@ -1,3 +1,8 @@
+/*
+Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+//This page allows a Patient to create and input 
 import React from 'react';
 import { gql, useMutation } from '@apollo/client';
 import { Form, Row, Col } from 'react-bootstrap';
