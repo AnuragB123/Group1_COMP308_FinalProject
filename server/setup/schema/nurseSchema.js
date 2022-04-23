@@ -1,7 +1,6 @@
 /*
-Group 1: Anurag Bhattacharya, Aaishi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+Group 1: Anurag Bhattacharya, Aashi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
 */
-
 //Schema for Nurse. Anurag Developed this
 
 import { buildSchema } from "graphql";

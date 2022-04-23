@@ -1,3 +1,7 @@
+/*
+Group 1: Anurag Bhattacharya, Aashi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
