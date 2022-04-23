@@ -1,3 +1,8 @@
+/*
+Group 1: Anurag Bhattacharya, Aashi Sinha, Illah Song, Joseph Volpe, Prajwal Regmi
+*/
+
+//We kept the Old Files of Lab3
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
