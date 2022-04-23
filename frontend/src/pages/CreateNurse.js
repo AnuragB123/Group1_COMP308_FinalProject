@@ -18,10 +18,10 @@ const CREATENURSE = gql`
 mutation CreateNurse(
     $nurseId: Int!,
     $bodyTemperature: Int!,
-    heartRate: Int!,
-    bloodPressure: Int!,
-    resporitoryRate: Int!,
-    dailyMotivationTips: String!,
+    $heartRate: Int!,
+    $bloodPressure: Int!,
+    $resporitoryRate: Int!,
+    $dailyMotivationTips: String!,
 ) {
     createNurse(
         nurseId: $nurseId,
